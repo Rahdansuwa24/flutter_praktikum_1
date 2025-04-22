@@ -1,16 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_praktikum_1/model/tourism_place.dart';
 
-class ListItem extends StatelessWidget{
+class ListItem extends StatelessWidget {
   final TourismPlace place;
   final bool isDone;
   final Function(bool? value) onCheckboxClick;
 
-  const ListItem({
-    required this.place,
-    required this.isDone,
-    required this.onCheckboxClick
-  });
+  const ListItem(
+      {super.key,
+      required this.place,
+      required this.isDone,
+      required this.onCheckboxClick});
 
   @override
   Widget build(BuildContext context) {
@@ -44,10 +44,9 @@ class ListItem extends StatelessWidget{
             ),
           ),
           Checkbox(
-            checkColor: const Color.fromARGB(255, 254, 254, 255),
-            value: isDone, 
-            onChanged: onCheckboxClick
-          ),
+              checkColor: const Color.fromARGB(255, 254, 254, 255),
+              value: isDone,
+              onChanged: onCheckboxClick),
         ],
       ),
     );

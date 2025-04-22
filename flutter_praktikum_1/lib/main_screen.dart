@@ -4,14 +4,13 @@ import 'package:flutter_praktikum_1/model/tourism_list.dart';
 import 'package:flutter_praktikum_1/model/tourism_place.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({Key? key}) : super(key: key);
+  const MainScreen({super.key});
 
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
 
 class _MainScreenState extends State<MainScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(

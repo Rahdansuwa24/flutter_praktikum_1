@@ -7,7 +7,7 @@ import 'package:flutter_praktikum_1/provider/done_tourism_provider.dart';
 import 'package:provider/provider.dart';
 
 class TourismList extends StatefulWidget {
-  const TourismList({Key? key}) : super(key: key);
+  const TourismList({super.key});
 
   @override
   State<TourismList> createState() => _TourismListState();
@@ -57,8 +57,7 @@ class _TourismListState extends State<TourismList> {
             builder: (context, DoneTourismProvider doneTourismProvider, child) {
               return ListItem(
                 place: place,
-                isDone:
-                    doneTourismProvider.doneTourismProvider.contains(place),
+                isDone: doneTourismProvider.doneTourismProvider.contains(place),
                 onCheckboxClick: (bool? value) {
                   doneTourismProvider.complete(place, value!);
                 },
